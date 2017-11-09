@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.veloso.danil.cadastro.TelaCadastro"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:layout_above="@+id/salvar"
+        android:layout_alignLeft="@+id/nome2"
+        android:layout_alignStart="@+id/nome2" />
+
+    <EditText
+        android:id="@+id/telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Telefone"
+        android:layout_above="@+id/email"
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignStart="@+id/email" />
+
+    <RadioButton
+        android:id="@+id/masc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masculino"
+        android:layout_alignBaseline="@+id/femin"
+        android:layout_alignBottom="@+id/femin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp" />
+
+    <RadioButton
+        android:id="@+id/femin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feminino"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/telefone"
+        android:layout_alignRight="@+id/telefone"
+        android:layout_alignEnd="@+id/telefone" />
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Primeiro Nome"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/nome2"
+        android:layout_alignStart="@+id/nome2" />
+
+    <EditText
+        android:id="@+id/nome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Segundo Nome"
+        android:layout_below="@+id/nome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:id="@+id/salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/femin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/femin"
+        android:layout_marginBottom="15dp"
+        android:onClick="onClick"
+        android:text="Salvar" />
+
+    <Button
+        android:id="@+id/listar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/masc"
+        android:layout_alignStart="@+id/masc"
+        android:layout_below="@+id/email"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:onClick="onClickListar"
+        android:text="LIstar" />
+</android.widget.RelativeLayout>
